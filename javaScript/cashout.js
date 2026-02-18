@@ -18,11 +18,10 @@ document.getElementById("cashout-btn")
         }
 
         // currentBalance access and validation 
-        let currentBalanceElement = document.getElementById("balance");
-        let newBalance = Number(currentBalanceElement.innerText);
+        let currentBalanceElement = getBalance();
 
         // calculate balance and validation
-        let balance = newBalance - amountNumber;
+        let balance = currentBalanceElement - amountNumber;
         if (balance < 0) {
             alert("Invalid Amount");
             return;
@@ -35,8 +34,9 @@ document.getElementById("cashout-btn")
             return;
         }
 
+        // set new balance
         alert("Transaction Success");
-        currentBalanceElement.innerText = balance;
+        setBalance(balance);
         document.getElementById("cashout-pin").value = "";
     })
 

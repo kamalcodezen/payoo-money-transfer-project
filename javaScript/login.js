@@ -12,8 +12,7 @@ loginBtn.addEventListener("click", function () {
     let pin = inputPin.value.trim();
     // console.log(pin);
 
-    // check the number & pin (true :: go the next 
-    //  page  || false :: return login failed);
+    // check the number & pin (true :: go the next   page  || false :: return login failed);
     if (!number || !pin) {
         alert("Please fill all fields");
         return;
