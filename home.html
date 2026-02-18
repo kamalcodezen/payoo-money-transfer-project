@@ -92,6 +92,40 @@
 
     </section>
 
+    <!-- Transfer money -->
+
+    <section id="transfer-money" class="cashout bg-base-300 ">
+        <div class="w-11/12 py-4 pl-6">
+            <h2 class=" text-neutral font-bold text-2xl ">Transfer Money</h2>
+        </div>
+
+        <div class="card w-11/12 bg-base-100  rounded-2xl mx-auto ">
+            <div class="card-body ">
+                <fieldset class="fieldset">
+
+                    <label class="label text-neutral font-semibold">User Account Number</label>
+                    <input id="user-number" maxlength="11" type="number" inputmode="numeric"
+                        class="input rounded-full bg-base-200 w-full mb-4" required
+                        placeholder="Enter 11 digit number" />
+
+                    <label class="label text-neutral font-semibold">Amount</label>
+                    <input id="transfer-amount" type="number" required
+                        class="input input-bordered rounded-full bg-base-200 focus:ring-0 focus:border-primary w-full mb-4"
+                        placeholder="Enter amount to transfer" />
+
+                    <label class="label text-neutral font-semibold">Pin Number</label>
+                    <input id="transfer-pin" type="password" maxlength="4" minlength="4" required
+                        class="input input-bordered rounded-full bg-base-200 focus:ring-0 focus:border-primary w-full mb-4"
+                        placeholder="Enter 4 digit pin number" />
+
+                    <button id="send-btn"
+                        class="btn btn-neutral mt-4 rounded-full bg-primary shadow-none text-white text-[1.25rem] font-semibold">Send
+                        Now</button>
+                </fieldset>
+            </div>
+        </div>
+
+    </section>
 
     <!-- coupon section -->
 
