@@ -85,7 +85,7 @@
             <img class=" mx-auto" src="./assets/opt-5.png" alt="">
             <p class="text-neutral/50 font-bold">Pay Bill</p>
         </button>
-        <button class=" flex-col h-full btn-soft btn">
+        <button onclick="showOnly('transaction-history')" class=" flex-col h-full btn-soft btn">
             <img class="mx-auto" src="./assets/opt-6.png" alt="">
             <p class="text-neutral/50 font-bold">Transactions</p>
         </button>
@@ -168,7 +168,21 @@
 
     </section>
 
-    <script src="./javaScript/machine.js"></script>
+
+    <section id="transaction-history" class="mb-10 ">
+        <div class="w-11/12 py-4 pl-6">
+            <h2 class=" text-neutral font-bold text-2xl ">Transaction History</h2>
+        </div>
+        <div id="history" class=" w-11/12 bg-base-100  rounded-2xl mx-auto space-y-3">
+
+        </div>
+    </section>
+
+
+
+
+    <script src=" ./javaScript/machine.js">
+    </script>
     <script src="./javaScript/addmoney.js"></script>
     <script src="./javaScript/cashout.js"></script>
 </body>
