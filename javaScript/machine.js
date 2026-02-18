@@ -17,3 +17,17 @@ function setBalance(value) {
     let newBalance = document.getElementById("balance");
     newBalance.innerText = value;
 }
+
+// click button hide and show id (section)
+function showOnly(id) {
+    const addMoney = document.getElementById("add-money");
+    const cashOut = document.getElementById("cashout");
+
+    // hidden id
+    addMoney.classList.add("hidden");
+    cashOut.classList.add("hidden");
+
+    // show only click id
+    const SelectId = document.getElementById(id);
+    SelectId.classList.remove("hidden");
+}
