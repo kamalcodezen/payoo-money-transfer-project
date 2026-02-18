@@ -22,7 +22,7 @@ loginBtn.addEventListener("click", function () {
         alert("login Success");
         inputNumber.value = "";
         inputPin.value = "";
-        window.location.assign("/javaScript/home.js");
+        window.location.assign("/home.html");
         return;
     } else {
         alert("oops login failed");
