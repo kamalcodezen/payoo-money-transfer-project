@@ -34,11 +34,7 @@ document.getElementById("add-money-btn")
         }
 
         // money update 
-        alert(`Transaction Success 
-         Money Added to ${addBank} 
-         Amount: Rs.${addAmount}
-         New balance: Rs.${newBalance}
-         Date: ${new Date().toLocaleString()}`);
+        alert(`Transaction Success`);
         setBalance(newBalance);
 
         // Transaction history
@@ -60,7 +56,7 @@ document.getElementById("add-money-btn")
           </p>
         </div>
         `
-        
+
         historyDiv.prepend(newHistoryDiv);
 
     })

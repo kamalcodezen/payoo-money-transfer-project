@@ -24,12 +24,16 @@ function showOnly(id) {
     const cashOut = document.getElementById("cashout");
     const transaction = document.getElementById("transaction-history");
     const couponCode = document.getElementById("get-bonus");
+    const transferMoney = document.getElementById("transfer-money");
+
+
 
     // hidden id
     addMoney.classList.add("hidden");
     cashOut.classList.add("hidden");
     transaction.classList.add("hidden");
     couponCode.classList.add("hidden");
+    transferMoney.classList.add("hidden");
 
     // show only click id
     const SelectId = document.getElementById(id);
