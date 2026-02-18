@@ -77,7 +77,7 @@
             <img class="mx-auto" src="./assets/opt-3.png" alt="">
             <p class="text-neutral/50 font-bold">Transfer Money</p>
         </button>
-        <button class="flex-col h-full btn-soft btn">
+        <button onclick="showOnly('get-bonus')" class="flex-col h-full btn-soft btn">
             <img class="mx-auto" src="./assets/opt-4.png" alt="">
             <p class="text-neutral/50  font-bold">Get Bonus</p>
         </button>
@@ -91,6 +91,35 @@
         </button>
 
     </section>
+
+
+    <!-- coupon section -->
+
+    <section id="get-bonus" class="cashout bg-base-300 hidden">
+        <div class="w-11/12 py-4 pl-6">
+            <h2 class=" text-neutral font-bold text-2xl ">Get Bonus</h2>
+        </div>
+
+        <div class="card w-11/12 bg-base-100  rounded-2xl mx-auto ">
+            <div class="card-body ">
+                <fieldset class="fieldset">
+
+                    <label class="label text-neutral font-semibold">Enter Bonus Coupon</label>
+                    <input id="coupon-number" type="text" class="input rounded-full bg-base-200 w-full" required
+                        placeholder="Enter your coupon" />
+
+                    <button id="coupon-btn"
+                        class="btn btn-neutral mt-4 rounded-full bg-primary shadow-none text-white text-[1.25rem] font-semibold">Get
+                        Bonus</button>
+                </fieldset>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <!-- add-money section -->
 
     <section id="add-money" class="cashout bg-base-300 hidden">
         <div class="w-11/12 py-4 pl-6">
@@ -134,6 +163,8 @@
     </section>
 
 
+    <!-- Cashout section -->
+
     <section id="cashout" class="cashout bg-base-300 hidden">
         <div class="w-11/12 py-4 pl-6">
             <h2 class=" text-neutral font-bold text-2xl ">Cash Out</h2>
@@ -169,6 +200,7 @@
     </section>
 
 
+    <!-- history collection -->
     <section id="transaction-history" class="mb-10 hidden">
         <div class="w-11/12 py-4 pl-6">
             <h2 class=" text-neutral font-bold text-2xl ">Transaction History</h2>
@@ -183,6 +215,7 @@
 
     <script src=" ./javaScript/machine.js">
     </script>
+    <script src="./javaScript/coupon.js"></script>
     <script src="./javaScript/addmoney.js"></script>
     <script src="./javaScript/cashout.js"></script>
 </body>

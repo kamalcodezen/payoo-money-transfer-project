@@ -23,12 +23,13 @@ function showOnly(id) {
     const addMoney = document.getElementById("add-money");
     const cashOut = document.getElementById("cashout");
     const transaction = document.getElementById("transaction-history");
+    const couponCode = document.getElementById("get-bonus");
 
     // hidden id
     addMoney.classList.add("hidden");
     cashOut.classList.add("hidden");
     transaction.classList.add("hidden");
-
+    couponCode.classList.add("hidden");
 
     // show only click id
     const SelectId = document.getElementById(id);
