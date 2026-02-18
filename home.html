@@ -42,7 +42,7 @@
                     <img src="./assets/logo.png" alt="">
                 </div>
                 <div>
-                    <h2 class="font-extrabold text-2xl">$45000</h2>
+                    <h2 class="font-extrabold text-2xl">$<span id="balance">45000</span></h2>
                     <p class="text-neutral text-xl opacity-50">Available Balance</p>
                 </div>
             </div>
@@ -102,21 +102,21 @@
                 <fieldset class="fieldset">
 
                     <label class="label text-neutral font-semibold">Agent Number</label>
-                    <input id="input-number" maxlength="11" minlength="11" type="number" inputmode="numeric"
+                    <input id="agent-number" maxlength="11"  type="number" inputmode="numeric"
                         class="input rounded-full bg-base-200 w-full mb-4" required
                         placeholder="Enter 11 digit number" />
 
                     <label class="label text-neutral font-semibold">Amount</label>
-                    <input id="input-pin" type="number" required
+                    <input id="cashout-amount" type="number" required
                         class="input input-bordered rounded-full bg-base-200 focus:ring-0 focus:border-primary w-full mb-4"
                         placeholder="Enter amount to withdraw" />
 
                     <label class="label text-neutral font-semibold">Pin Number</label>
-                    <input id="input-pin" type="password" maxlength="4" minlength="4" required
+                    <input id="cashout-pin" type="password" maxlength="4" minlength="4" required
                         class="input input-bordered rounded-full bg-base-200 focus:ring-0 focus:border-primary w-full mb-4"
                         placeholder="Enter 4 Digit Pin" />
 
-                    <button id="login-btn"
+                    <button id="cashout-btn"
                         class="btn btn-neutral mt-4 rounded-full bg-primary shadow-none text-white text-[1.25rem] font-semibold">Withdraw
                         Money</button>
                 </fieldset>
@@ -127,14 +127,7 @@
     </section>
 
 
-
-
-
-
-
-
-    <script src=" ./javaScript/home.js">
-    </script>
+    <script src="./javaScript/cashout.js"></script>
 </body>
 
 </html>
