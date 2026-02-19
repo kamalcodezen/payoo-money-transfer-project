@@ -10,8 +10,8 @@ document.getElementById("pay-bill-btn")
         }
 
         // pay bill account number access and validation
-        const BillAccountNumber = Number(getValueFromInput("pay-bill-number"));
-        if (!BillAccountNumber || isNaN(BillAccountNumber)) {
+        const billAccountNumber = getValueFromInput("pay-bill-number");
+        if (billAccountNumber.length !== 11 || !/^\d+$/.test(billAccountNumber)) {
             alert("Please Enter Valid Account Number");
             return;
         }
@@ -19,7 +19,7 @@ document.getElementById("pay-bill-btn")
 
         // amount pay access and validation 
         const billPayAmount = Number(getValueFromInput("pay-bill-amount"));
-        if (!billPayAmount || isNaN(billPayAmount) || billPayAmount <= 0) {
+        if (isNaN(billPayAmount) || billPayAmount <= 0) {
             alert("Please Enter a Valid Amount");
             return;
         }
@@ -34,32 +34,18 @@ document.getElementById("pay-bill-btn")
 
         // pin access and validation
         const pin = Number(getValueFromInput("pay-bill-pin"));
-        if (!pin || isNaN(pin) || pin !== 1234) {
+        if (isNaN(pin) || pin !== 1234) {
             alert("Wrong Pin!");
             return;
         }
 
+        // setBalance 
         alert("Bill Pay Success");
         setBalance(newBalance);
 
-        // transaction history transfer ----
-        // history div access and create new div inside and add prepend ----
-        const historyDiv = document.getElementById("history");
-        const newHistoryDiv = document.createElement("div");
-        newHistoryDiv.innerHTML = `
-         < div class="w-11/12 bg-base-100 flex    rounded-2xl mx-auto gap-4 items-center mt-2  py-2" >
-         <div>
-           <img class="w-[30px] h-[40px] " src="./assets/opt-1.png" alt="">
-         </div>
-         <p class="text-neutral/50 font-bold">
-            Money Sent to ${BillAccountNumber} <br>
-            Amount Rs.${billPayAmount}<br>
-            New Balance: Rs.${newBalance} <br>
-            Date: ${new Date().toLocaleString()}
-         </p>
-        <div/>
-        `
-        newHistoryDiv.prepend(historyDiv);
 
+        // transaction history transfer ----
+        // history div access and create new div inside and add prepend call function ----
+        addHistory("Bill Paid", billAccountNumber, billPayAmount, newBalance, "text-red-500");
 
     })
