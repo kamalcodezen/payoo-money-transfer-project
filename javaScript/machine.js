@@ -34,6 +34,7 @@ function showOnly(id) {
     transaction.classList.add("hidden");
     couponCode.classList.add("hidden");
     transferMoney.classList.add("hidden");
+    
 
     // show only click id
     const SelectId = document.getElementById(id);
