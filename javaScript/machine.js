@@ -55,12 +55,18 @@ function addHistory(type, account, amount, balance, color) {
             <div>
                 <img class="w-[30px] h-[40px]" src="./assets/opt-1.png">
             </div>
-          <p class="font-bold ${color}">
-          ${type} to ${account} <br>
-          Amount: Rs.${amount} <br>
-          New Balance: Rs.${balance} <br>
-          Date: ${new Date().toLocaleString()}
-          </p>
+          <div class="flex-1">
+                <span class="px-2 py-1 ${color} rounded-lg text-sm font-semibold">
+                    ${type}
+                </span>
+
+                <p class="text-sm mt-1 font-semibold">
+                    Account: ${account}<br>
+                    Amount: Rs.${amount}<br>
+                    Balance: Rs.${balance}<br>
+                    Date: ${new Date().toLocaleString()}
+                </p>
+            </div>
 
      </div>
     `;
