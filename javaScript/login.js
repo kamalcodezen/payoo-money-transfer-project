@@ -29,4 +29,4 @@ loginBtn.addEventListener("click", function () {
         return;
     }
 
-})
+});

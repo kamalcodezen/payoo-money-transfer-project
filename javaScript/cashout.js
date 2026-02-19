@@ -38,31 +38,10 @@ document.getElementById("cashout-btn")
         alert("Transaction Success");
         setBalance(balance);
 
-        // Transaction history
-        // Transaction div access
-        const historyDiv = document.getElementById("history");
+        // Transaction history function call 
+        addHistory("MONEY WITHDRAW", agentNumber, amountNumber, balance, "bg-red-100 text-red-600");
 
-        // new div create
-        let newHistoryDiv = document.createElement("div");
-        newHistoryDiv.innerHTML = `
-        <div class="w-11/12 bg-base-100 flex rounded-2xl mx-auto gap-4 items-center mt-2 py-2">
-          <div>
-          <img class="w-[30px] h-[40px] " src="./assets/opt-1.png" alt="">
-         </div>
-         <p class="text-neutral/50 font-bold">
-         Transaction Success Money Withdraw Rs.${amountNumber}
-         <br>
-         Total Amount: Rs.${balance} <br>
-         Date: ${new Date().toLocaleString()}
-         </p>
-        </div>
-        `
-        
-
-        historyDiv.prepend(newHistoryDiv);
-
-        document.getElementById("cashout-pin").value = "";
-    })
+    });
 
 
 

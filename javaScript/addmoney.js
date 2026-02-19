@@ -40,4 +40,4 @@ document.getElementById("add-money-btn")
         // Transaction history function call 
         addHistory(`ADD MONEY TO - ${addBank}`, accountNumber, addAmount, newBalance, "bg-green-100 text-green-500");
 
-    })
+    });
