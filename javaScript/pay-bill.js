@@ -46,7 +46,7 @@ document.getElementById("pay-bill-btn")
 
         // transaction history transfer ----
         // history div access and create new div inside and add prepend call function ----
-      addHistory("BILL", billAccountNumber, billPayAmount, newBalance, "bg-red-100 text-red-600");
+        addHistory("BILL", billAccountNumber, billPayAmount, newBalance, "bg-red-100 text-red-600");
 
 
     })
