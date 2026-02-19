@@ -37,24 +37,8 @@ document.getElementById("send-btn")
         alert("Transaction Success");
         setBalance(newBalance);
 
-        // transaction history
-        const transactionHistory = document.getElementById("history");
+        // transaction history added and function call
+        addHistory("MONEY TRANSFER", userNumber, amountNumber, newBalance, "bg-red-100 text-red-600");
 
-        let history = document.createElement("div");
-        history.innerHTML = `
-        <div class="w-11/12 bg-base-100 flex rounded-2xl mx-auto gap-4 items-center mt-2 py-2">
-          <div>
-          <img class="w-[30px] h-[40px] " src="./assets/opt-1.png" alt="">
-         </div>
-         <p class="text-neutral/50 font-bold">
-         Money Sent to ${userNumber} <br>
-         Amount Rs.${amountNumber}<br>
-         New Balance: Rs.${newBalance} <br>
-         Date: ${new Date().toLocaleString()}
-         </p>
-        </div>
-        `
-        transactionHistory.prepend(history);
-
-    })
+    });
 
