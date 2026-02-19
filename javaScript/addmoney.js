@@ -37,26 +37,7 @@ document.getElementById("add-money-btn")
         alert(`Transaction Success`);
         setBalance(newBalance);
 
-        // Transaction history
-        // Transaction div access
-        const historyDiv = document.getElementById("history");
-
-        // new div create
-        let newHistoryDiv = document.createElement("div");
-        newHistoryDiv.innerHTML = `
-        <div class="w-11/12 bg-base-100 flex rounded-2xl mx-auto gap-4 items-center mt-2 py-2">
-          <div>
-           <img class="w-[40px] h-[40px] " src="./assets/opt-1.png" alt="">
-         </div>
-          <p class="text-neutral/50 font-bold">
-          Transaction Success Money Credited to ${addBank}
-          Amount: Rs.${addAmount}
-          <br>
-          Date: ${new Date().toLocaleString()}
-          </p>
-        </div>
-        `
-
-        historyDiv.prepend(newHistoryDiv);
+        // Transaction history function call 
+        addHistory(`ADD MONEY TO - ${addBank}`, accountNumber, addAmount, newBalance, "bg-green-100 text-green-500");
 
     })
