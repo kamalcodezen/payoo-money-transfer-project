@@ -1,7 +1,7 @@
 const loginBtn = document.getElementById("login-btn");
 
-loginBtn.addEventListener("click", function () {
-
+loginBtn.addEventListener("click", function (event) {
+    event.preventDefault();
     // number input access with value
     const inputNumber = document.getElementById("input-number");
     let number = inputNumber.value.trim();
@@ -21,7 +21,7 @@ loginBtn.addEventListener("click", function () {
         alert("login Success");
         inputNumber.value = "";
         inputPin.value = "";
-        window.location.assign("/home.html");
+        window.location.assign("home.html");
         return;
     } else {
         alert("oops login failed");
