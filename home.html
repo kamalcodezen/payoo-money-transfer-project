@@ -34,7 +34,8 @@
 
 <body class="min-h-screen mx-auto max-w-md bg-base-200">
 
-    <header class="sticky top-0 z-50 bg-base-100 ">
+    <!-- navbar logo and balance -->
+    <header class="sticky top-0 z-50 bg-base-100 mt-6">
         <div
             class="header w-11/12 mx-auto  pt-3 pb-3 border-b-2 border-gray-200 flex justify-between items-center mb-8 ">
             <div class="flex gap-2">
@@ -43,22 +44,26 @@
                 </div>
                 <div>
                     <h2 class="font-extrabold text-2xl">$<span id="balance">45000</span></h2>
-                    <p class="text-neutral text-xl opacity-50">Available Balance</p>
+                    <p class="text-neutral text-sm opacity-50">Available Balance</p>
                 </div>
             </div>
             <div>
-                <a href="/index.html" class="btn btn-primary opacity-80 gap-3 text-lg font-medium"> <i
+                <a href="/index.html" class="btn btn-dash btn-primary opacity-80 gap-3 text-lg font-medium"> <i
                         class="fa-solid fa-arrow-right-from-bracket rotate-180 "></i>Log Out</a>
             </div>
         </div>
     </header>
 
+    <!-- banner heading -->
     <section class="mb-6">
         <div class="w-11/12 mx-auto">
             <h2 class="text-neutral font-bold text-2xl">Welcome to Pay<span class="text-primary">oo</span></h2>
-            <p class="text-neutral opacity-50 text-[18px] leading-7 ">Enjoy easy and convenient financial services with
+            <p class="text-neutral opacity-50 text-[18px] leading-7 mb-3">Enjoy easy and convenient financial services
+                with
                 us. Cashout charge
                 is low and </p>
+            <input type="text" placeholder="Pay by name or phone number"
+                class="input input-primary rounded-lg w-full" />
         </div>
 
     </section>
@@ -86,7 +91,7 @@
             <img class=" mx-auto" src="./assets/opt-5.png" alt="">
             <p class=" font-bold">Pay Bill</p>
         </button>
-        <button onclick="showOnly('transaction-history')" class=" flex-col h-full btn btn-active btn-error">
+        <button onclick="showOnly('transaction-history')" class=" flex-col h-full btn btn-soft ">
             <img class="mx-auto" src="./assets/opt-6.png" alt="">
             <p class="font-bold">Transactions</p>
         </button>
@@ -114,7 +119,7 @@
                     <label class="label text-neutral font-semibold">Biller Account Number</label>
                     <input id="pay-bill-number" type="number" inputmode="numeric"
                         class="input rounded-full bg-base-200 w-full mb-4" required
-                        placeholder="Enter 11 digit account number" />
+                        placeholder="Enter 11 digit account number" value="12345678901" />
 
                     <label class="label text-neutral font-semibold">Amount to Pay</label>
                     <input id="pay-bill-amount" type="number" required
@@ -136,9 +141,7 @@
     </section>
 
 
-
     <!-- Transfer money -->
-
     <section id="transfer-money" class="cashout bg-base-300 hidden">
         <div class="w-11/12 py-4 pl-6">
             <h2 class=" text-neutral font-bold text-2xl ">Transfer Money</h2>
@@ -150,8 +153,8 @@
 
                     <label class="label text-neutral font-semibold">User Account Number</label>
                     <input id="user-number" maxlength="11" type="number" inputmode="numeric"
-                        class="input rounded-full bg-base-200 w-full mb-4" required
-                        placeholder="Enter 11 digit number" />
+                        class="input rounded-full bg-base-200 w-full mb-4" required placeholder="Enter 11 digit number"
+                        value="12345678901" />
 
                     <label class="label text-neutral font-semibold">Amount</label>
                     <input id="transfer-amount" type="number" required
@@ -172,8 +175,8 @@
 
     </section>
 
-    <!-- coupon section -->
 
+    <!-- coupon section -->
     <section id="get-bonus" class="cashout bg-base-300 hidden">
         <div class="w-11/12 py-4 pl-6">
             <h2 class=" text-neutral font-bold text-2xl ">Get Bonus</h2>
@@ -185,7 +188,7 @@
 
                     <label class="label text-neutral font-semibold">Enter Bonus Coupon</label>
                     <input id="coupon-number" type="text" class="input rounded-full bg-base-200 w-full" required
-                        placeholder="Enter your coupon" />
+                        placeholder="Enter your coupon" value="BONUS50" />
 
                     <button id="coupon-btn"
                         class="btn btn-neutral mt-4 rounded-full bg-primary shadow-none text-white text-[1.25rem] font-semibold">Get
@@ -199,8 +202,7 @@
 
 
     <!-- add-money section -->
-
-    <section id="add-money" class="cashout bg-base-300 hidden">
+    <section id="add-money" class="cashout bg-base-300 ">
         <div class="w-11/12 py-4 pl-6">
             <h2 class=" text-neutral font-bold text-2xl ">Add Money</h2>
         </div>
@@ -220,7 +222,7 @@
                     <label class="label text-neutral font-semibold">Bank Account Number</label>
                     <input id="add-money-number" maxlength="11" type="number" inputmode="numeric"
                         class="input rounded-full bg-base-200 w-full mb-4" required
-                        placeholder="Enter 11 digit account number" />
+                        placeholder="Enter 11 digit account number" value="12345678901" />
 
                     <label class="label text-neutral font-semibold">Amount to Add</label>
                     <input id="add-money-amount" type="number" required
@@ -243,7 +245,6 @@
 
 
     <!-- Cashout section -->
-
     <section id="cashout" class="cashout bg-base-300 hidden">
         <div class="w-11/12 py-4 pl-6">
             <h2 class=" text-neutral font-bold text-2xl ">Cash Out</h2>
@@ -255,8 +256,8 @@
 
                     <label class="label text-neutral font-semibold">Agent Number</label>
                     <input id="agent-number" maxlength="11" type="number" inputmode="numeric"
-                        class="input rounded-full bg-base-200 w-full mb-4" required
-                        placeholder="Enter 11 digit number" />
+                        class="input rounded-full bg-base-200 w-full mb-4" required placeholder="Enter 11 digit number"
+                        value="12345678901" />
 
                     <label class="label text-neutral font-semibold">Amount</label>
                     <input id="cashout-amount" type="number" required
